@@ -1,13 +1,13 @@
 package com.appsdeveloperblog.shopify.clients.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
-@Data
-@AllArgsConstructor
+@Setter
+@Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ProductList {
-    private List<Products> products;
+    public List<Products>products;
+
 }

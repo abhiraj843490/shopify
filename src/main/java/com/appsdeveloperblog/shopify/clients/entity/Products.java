@@ -2,12 +2,14 @@ package com.appsdeveloperblog.shopify.clients.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.web.bind.annotation.GetMapping;
+
 import java.util.List;
 
-//@NoArgsConstructor
-//@AllArgsConstructor
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Products {
     @Id
     private Long id;
@@ -17,11 +19,4 @@ public class Products {
     @JoinColumn(name = "product_id")
     private List<Variants>variants;
 
-    public Products(Long id, String title, String vendor) {
-        this.id = id;
-        this.title = title;
-        this.vendor = vendor;
-    }
-    public Products() {
-    }
 }

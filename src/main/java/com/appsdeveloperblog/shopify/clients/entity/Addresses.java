@@ -1,23 +1,22 @@
 package com.appsdeveloperblog.shopify.clients.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Entity
-public class Variants {
+public class Addresses {
     @Id
     private Long id;
-    private Long product_id;
-    private String title;
-    private double price;
-    private Long position;
-
+    private Long customer_id;
+    private String first_name;
+    private String last_name;
+    private String address1;
+    private String city;
+    private String country;
 }
